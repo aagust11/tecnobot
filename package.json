@@ -1,0 +1,1 @@
+{"name":"tecnobot","version":"1.0.0","private":true,"type":"module","scripts":{"validate-knowledge":"node scripts/validate.mjs","test":"node --test","build":"npm run validate-knowledge && node scripts/build.mjs","dev":"python3 -m http.server 4173 --directory dist"}}
