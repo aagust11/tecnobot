@@ -80,15 +80,21 @@ Per exemple, Electricitat:
 5. Afegeix proves reals i negatives. Ampliar el vocabulari pot alterar el rànquing: revisa les regressions.
 6. Puja els canvis. No cal modificar motor, UI ni registre. Amb dos mòduls apareix automàticament el selector de tema.
 
-## Conversa, privacitat i seguretat
+## Converses i navegació
 
-El text de l’alumne es mostra amb `textContent`, mai amb `innerHTML`. El text lliure només queda en memòria mentre la pàgina és oberta. Per evitar desar dades personals escrites accidentalment, `sessionStorage` conserva únicament IDs de respostes, modes i candidats. En recarregar es recuperen les respostes, però no les preguntes literals. La navegació per àncores conserva tota la conversa en memòria. «Nova conversa» ho esborra tot.
+El xat és la vista inicial. El lateral permet crear converses, cercar-les pel títol o les preguntes i reprendre-les. La capçalera permet reanomenar o eliminar la conversa amb confirmació. «Explora els temes» obre la biblioteca; «Obre al xat» afegeix el concepte a la conversa activa. El filtre de la biblioteca no restringeix les preguntes del xat.
 
-Límit de 60 elements i 800 caràcters per pregunta. Emmagatzematge bloquejat o malformat no impedeix la cerca. Sense analítica, fonts remotes ni telemetria. L’allotjament rep les peticions normals de fitxers; les preguntes no s’hi inclouen.
+Les converses completes (preguntes i referències a les respostes) es desen a `localStorage`, en una clau per conversa i ruta del projecte. Es recuperen després de recarregar o tancar el navegador. No hi ha compte ni sincronització entre dispositius. Esborrar les dades del navegador elimina l’historial. Les respostes es reconstrueixen amb el temari actual; no són instantànies de versions antigues.
 
-## Accessibilitat i mòbil
+Les pestanyes observen els canvis amb l’esdeveniment `storage`. Cada modificació llegeix la versió desada abans d’afegir missatges. Les escriptures estrictament simultànies a la mateixa conversa encara poden entrar en conflicte: localStorage no ofereix transaccions. No s’elimina historial automàticament per antiguitat ni per quantitat de missatges. Si no es pot desar, es mostra un avís i els canvis queden en memòria durant la pestanya actual.
 
-Controls de 44 px com a mínim, focus visible, camps etiquetats, `role=log`, Enter per enviar i Esc per tancar. Panell no modal: no atrapa el teclat. Retorna el focus al control d’origen en tancar. En mòbil ocupa gairebé tota la pantalla, amb `dvh`. Respecta `prefers-reduced-motion`.
+Les respostes de l’antic `sessionStorage` es recuperen com a «Conversa anterior» quan encara existeixen. Les preguntes antigues no es poden recuperar perquè abans no es desaven.
+
+## Privacitat i accessibilitat
+
+Les preguntes es desen literalment en aquest navegador. La interfície ho indica i demana no escriure dades personals. Els textos s’insereixen amb `textContent`, sense HTML executable. Sense analítica, API d’IA ni enviament de preguntes. El límit és de 800 caràcters per pregunta.
+
+El disseny s’adapta al mòbil amb un menú lateral desplegable. Camps etiquetats, focus visible, `role=log`, Enter per enviar, Majús+Enter per saltar de línia i Esc per tancar el menú. Els temes continuen accessibles amb teclat.
 
 ## Debug
 
@@ -101,3 +107,4 @@ El validador comprova JSON, mòduls i IDs únics, camps, respostes, llistes, sin
 Configura **Settings → Pages → Source: GitHub Actions**. No cal Vite, backend ni instal·lació npm. El workflow valida els PR i desplega `main`. Si Pages no està activat, el build pot passar i el deploy fallar: activa’l i torna a executar el workflow.
 
 Abans de distribuir l’URL, comprova el desplegament, les preguntes, els aclariments, els botons, els enllaços, la recàrrega, el teclat i el mòbil. A Network, enviar preguntes no ha de generar cap petició externa.
+

@@ -1,51 +1,45 @@
 import {createEngine} from './engine/search-engine.js';
 import {CONFIG} from './engine/config.js';
 import {normalize} from './engine/normalizer.js';
+import {createConversationStore, PREFIX} from './conversations.js';
 const $=id=>document.getElementById(id);
 const debug=new URLSearchParams(location.search).get('debugChatbot')==='true';
-let engine,history=[],lastFocus,selectedModule='';
-const key='tecnobot:v1:'+new URL('../',import.meta.url).pathname;
+let engine,activeId=null,view='chat';
+function report(text){$('storage-status').textContent=text;$('storage-status').hidden=false;}
+let storage;try{storage=localStorage;}catch{storage={getItem(){throw Error();},setItem(){throw Error();},removeItem(){throw Error();},get length(){throw Error();}};}
+const store=createConversationStore(storage,report);
+const activeKey=PREFIX+'active-tab';
 function el(tag,text,className){const n=document.createElement(tag);if(text)n.textContent=text;if(className)n.className=className;return n;}
 function button(text,action){const b=el('button',text);b.type='button';b.addEventListener('click',action);return b;}
-function openChat(){if($('chat').hidden)lastFocus=document.activeElement;$('chat').hidden=false;$('launcher').setAttribute('aria-expanded','true');$('question').focus();}
-function closeChat(){$('chat').hidden=true;$('launcher').setAttribute('aria-expanded','false');(lastFocus||$('launcher')).focus();}
-function save(){try{sessionStorage.setItem(key,JSON.stringify(history.filter(h=>!h.transient).slice(-CONFIG.historyLimit)));}catch{/* La cerca funciona encara que l’emmagatzematge estigui bloquejat. */}}
-function record(item){history.push(item);history=history.slice(-CONFIG.historyLimit);save();renderMessages();}
-function showEntry(id,mode='shortAnswer'){if(engine.entries.some(e=>e.id===id))record({kind:'answer',id,mode});}
-function ask(q){if(!engine||!q.trim())return;openChat();const result=engine.search(q,{module:selectedModule||null,context:location.hash.slice(1)});if(debug)console.debug('TecnoBot',result);
- // No es desen les preguntes lliures: l’historial persistent només conté referències al temari.
- history.push({kind:'question',text:q.slice(0,CONFIG.maxQuestionLength),transient:true});
- const item=result.status==='answer'?{kind:'answer',id:result.id,mode:'shortAnswer'}:result.status==='clarify'?{kind:'clarify',ids:result.results.filter(r=>r.score>=CONFIG.clarificationThreshold).slice(0,3).map(r=>r.id)}:{kind:'unknown'};
- history.push(item);history=history.slice(-CONFIG.historyLimit);
- try{sessionStorage.setItem(key,JSON.stringify(history.filter(h=>!h.transient)));}catch{}
- renderMessages();if(debug){const details=el('details');details.append(el('summary','Diagnòstic de la cerca'),el('pre',JSON.stringify(result,null,2)));$('messages').append(details);}
-}
-function renderMessages(){const log=$('messages');log.replaceChildren();if(!history.length){const welcome=el('div',null,'message bot');welcome.append(el('strong','Hola! Què vols entendre avui?'),el('p',`Puc ajudar-te amb ${engine.modules.map(m=>m.title).join(', ')}. Escriu un dubte o tria un concepte.`));const actions=el('div',null,'actions');engine.entries.slice(0,3).forEach(e=>actions.append(button(e.title,()=>showEntry(e.id))));welcome.append(actions);log.append(welcome);}
- for(const h of history){const box=el('div',null,'message '+(h.kind==='question'?'user':'bot'));const actions=el('div',null,'actions');
-  if(h.kind==='question')box.append(el('p',h.text));
-  if(h.kind==='answer') {const e=engine.entries.find(e=>e.id===h.id);if(!e)continue;box.append(el('strong',e.title));
-   if(h.mode==='related'){box.append(el('p','Continua explorant:'));e.related.forEach(id=>{const r=engine.entries.find(e=>e.id===id);if(r)actions.append(button(r.title,()=>showEntry(id)));});}
-   else if(h.mode==='examples') e.examples.forEach(t=>box.append(el('p',t)));
-   else box.append(el('p',e[h.mode]||e.shortAnswer));
-   for(const [label,mode] of [['Més fàcil','easyAnswer'],['Amplia','fullAnswer'],['Exemples','examples'],['Relacionats','related']]) if(mode!==h.mode) actions.append(button(label,()=>showEntry(e.id,mode)));
-   const a=el('a','Veure al tema ↗');a.href=e.page;a.addEventListener('click',()=>{ $('filter').value='';$('module').value='';selectedModule='';renderCards();closeChat();requestAnimationFrame(()=>$(e.id)?.focus());});actions.append(a);
-  }
-  if(h.kind==='clarify'){box.append(el('p','Vols dir algun d’aquests conceptes?'));h.ids.forEach(id=>{const e=engine.entries.find(e=>e.id===id);if(e)actions.append(button(e.title,()=>showEntry(id)));});actions.append(button('Cap d’aquests',()=>record({kind:'unknown'})));}
-  if(h.kind==='unknown'){box.append(el('p',`No he trobat aquesta informació als continguts disponibles. Ara mateix puc ajudar-te amb ${engine.modules.map(m=>m.title).join(', ')}. Prova una pregunta més concreta o explora el temari.`));engine.entries.filter(e=>!selectedModule||e.module===selectedModule).slice(0,3).forEach(e=>actions.append(button(e.title,()=>showEntry(e.id))));}
-  box.append(actions);log.append(box);
- }log.scrollTop=log.scrollHeight;
-}
-function renderCards(){const list=engine.entries.filter(e=>(!selectedModule||e.module===selectedModule)&&normalize(e.title+' '+e.keywords.join(' ')).includes(normalize($('filter').value)));$('cards').replaceChildren();$('count').textContent=`${list.length} conceptes · ${engine.modules.length} tema${engine.modules.length===1?'':'s'}`;
- for(const [i,e] of list.entries()){const card=el('article',null,'concept-card');card.id=e.id;card.tabIndex=-1;card.append(el('span',String(i+1).padStart(2,'0'),'card-number'),el('h3',e.title),el('p',e.shortAnswer));const detail=el('details');detail.append(el('summary','Llegeix l’explicació'),el('p',e.fullAnswer),el('p',e.examples.join(' '),'example'));card.append(detail,button('Explora amb TecnoBot ↗',()=>{openChat();showEntry(e.id);}));$('cards').append(card);}if(!list.length)$('cards').append(el('p','No hi ha conceptes amb aquest filtre.'));
-}
-$('launcher').addEventListener('click',()=> $('chat').hidden?openChat():closeChat());$('start-chat').addEventListener('click',openChat);$('close-chat').addEventListener('click',closeChat);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('chat').hidden)closeChat();});
-$('reset').addEventListener('click',()=>{history=[];save();if(engine)renderMessages();$('question').focus();});
-$('chat-form').addEventListener('submit',e=>{e.preventDefault();const q=$('question').value;$('question').value='';ask(q);$('question').focus();});
-document.querySelectorAll('[data-ask]').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.ask)));
-$('filter').addEventListener('input',()=>{if(engine)renderCards();});$('module').addEventListener('change',()=>{selectedModule=$('module').value;if(engine)renderCards();});
-try{const r=await fetch(new URL('../knowledge.json',import.meta.url));if(!r.ok)throw Error(r.status);const modules=await r.json();engine=createEngine(modules);
- for(const m of modules){const option=el('option',m.title);option.value=m.id;$('module').append(option);}$('module-label').hidden=modules.length<2;$('available').textContent=modules.map(m=>m.title).join(' · ');
- try{const saved=JSON.parse(sessionStorage.getItem(key)||'[]');if(Array.isArray(saved))history=saved.filter(h=>h&&((h.kind==='answer'&&engine.entries.some(e=>e.id===h.id)&&['shortAnswer','easyAnswer','fullAnswer','examples','related'].includes(h.mode))||(h.kind==='clarify'&&Array.isArray(h.ids)&&h.ids.every(id=>typeof id==='string'))||h.kind==='unknown')).slice(-CONFIG.historyLimit);}catch{}
- renderCards();renderMessages();if(location.hash)requestAnimationFrame(()=>document.getElementById(location.hash.slice(1))?.scrollIntoView());
-}catch(error){$('load-error').hidden=false;$('count').textContent='Continguts no disponibles';$('messages').append(el('p','No s’han pogut carregar els continguts. Recarrega la pàgina.'));$('question').disabled=true;if(debug)console.error(error);}
+function current(){return activeId?store.get(activeId):null;}
+function remember(){try{sessionStorage.setItem(activeKey,activeId||'');}catch{}}
+function menu(open){document.body.classList.toggle('menu-open',open);$('backdrop').hidden=!open;$('menu-toggle').setAttribute('aria-expanded',String(open));if(open)$('new-chat').focus();}
+function setView(next){view=next;$('chat').hidden=next!=='chat';$('topics').hidden=next!=='topics';$('back-chat').hidden=next!=='topics';$('explore').setAttribute('aria-current',next==='topics'?'page':'false');menu(false);renderHeader();}
+function renderHeader(){const c=current();$('view-title').textContent=view==='topics'?'Biblioteca de temes':c?.title||'Nova conversa';$('conversation-tools').hidden=view!=='chat'||!c;document.title='TecnoBot · '+$('view-title').textContent;}
+function select(id){activeId=id;remember();$('question').value='';setView('chat');renderSidebar();renderMessages();$('question').focus();}
+function append(items){let c=current();if(!c){c={id:crypto.randomUUID(),title:'Nova conversa',updatedAt:Date.now(),messages:[]};activeId=c.id;}if(!c.messages.length)c.title=(items.find(m=>m.kind==='question')?.text||engine.entries.find(e=>e.id===items[0]?.id)?.title||'Consulta del temari').slice(0,70);c.messages.push(...items);c.updatedAt=Date.now();store.save(c);remember();renderSidebar();renderHeader();renderMessages();}
+function showEntry(id,mode='shortAnswer'){if(!engine?.entries.some(e=>e.id===id))return;setView('chat');append([{kind:'answer',id,mode}]);$('question').focus();}
+function ask(q){q=q.trim().slice(0,CONFIG.maxQuestionLength);if(!engine||!q)return;const c=current();const context=c?.messages.findLast(m=>m.kind==='answer')?.id;const result=engine.search(q,{context});const item=result.status==='answer'?{kind:'answer',id:result.id,mode:'shortAnswer'}:result.status==='clarify'?{kind:'clarify',ids:result.results.filter(r=>r.score>=CONFIG.clarificationThreshold).slice(0,3).map(r=>r.id)}:{kind:'unknown'};setView('chat');append([{kind:'question',text:q},item]);if(debug){const details=el('details');details.append(el('summary','Diagnòstic de la cerca'),el('pre',JSON.stringify(result,null,2)));$('messages').append(details);} }
+function renderSidebar(){const all=store.list(),q=normalize($('history-search').value),list=all.filter(c=>normalize(c.title+' '+c.messages.filter(m=>m.kind==='question').map(m=>m.text).join(' ')).includes(q));$('conversations').replaceChildren();for(const c of list){const b=button(c.title,()=>select(c.id));b.className='conversation';b.title=c.title;b.setAttribute('aria-current',String(c.id===activeId));b.append(el('small',new Date(c.updatedAt).toLocaleDateString('ca-ES',{day:'numeric',month:'short'})));$('conversations').append(b);}if(!list.length)$('conversations').append(el('p',all.length?'Cap conversa coincideix amb la cerca.':'Les teves converses apareixeran aquí.','empty-history'));}
+function welcome(log){const box=el('div',null,'welcome');box.append(el('span','✦','symbol'),el('p','UN ESPAI PER ENTENDRE LA TECNOLOGIA','eyebrow'),el('h2','Què vols descobrir avui?'),el('p','Pregunta, explora i reprèn els teus dubtes quan vulguis. Cada conversa té el seu espai.'));const suggestions=el('div',null,'suggestions');const ids=['structures.triangulation','structures.tension','structures.properties'];const entries=ids.map(id=>engine.entries.find(e=>e.id===id)).filter(Boolean);for(const e of (entries.length?entries:engine.entries.slice(0,3))){const q=e.exampleQuestions[0]||e.title;const b=button(q,()=>ask(q));b.prepend(el('span','↗'));suggestions.append(b);}box.append(suggestions,el('p','TecnoBot cerca respostes preparades del temari, sense IA. Si una pregunta no és prou clara, et proposarà conceptes per triar.','disclosure'));log.append(box);}
+function renderMessages(){if(!engine)return;const log=$('messages');log.replaceChildren();const history=current()?.messages||[];if(!history.length)welcome(log);for(const h of history){const box=el('article',null,'message '+(h.kind==='question'?'user':'bot'));const actions=el('div',null,'actions');if(h.kind!=='question')box.append(el('span','✦ TECNOBOT','bot-label'));
+ if(h.kind==='question')box.append(el('p',h.text));
+ if(h.kind==='answer'){const e=engine.entries.find(e=>e.id===h.id);if(!e){box.append(el('p','Aquest concepte ja no està disponible al temari.'));}else{box.append(el('strong',e.title));if(h.mode==='related'){box.append(el('p','Continua explorant:'));e.related.forEach(id=>{const r=engine.entries.find(e=>e.id===id);if(r)actions.append(button(r.title,()=>showEntry(id)));});}else if(h.mode==='examples')e.examples.forEach(t=>box.append(el('p',t)));else box.append(el('p',e[h.mode]||e.shortAnswer));for(const [label,mode] of [['Més fàcil','easyAnswer'],['Amplia','fullAnswer'],['Exemples','examples'],['Relacionats','related']])if(mode!==h.mode)actions.append(button(label,()=>showEntry(e.id,mode)));actions.append(button('Veure al tema ↗',()=>openTopic(e.id)));}}
+ if(h.kind==='clarify'){box.append(el('p','Vols dir algun d’aquests conceptes?'));h.ids.forEach(id=>{const e=engine.entries.find(e=>e.id===id);if(e)actions.append(button(e.title,()=>showEntry(id)));});actions.append(button('Cap d’aquests',()=>append([{kind:'unknown'}])));}
+ if(h.kind==='unknown'){box.append(el('p','No he trobat aquesta informació al temari disponible. Prova una pregunta més concreta o explora els temes.'));actions.append(button('Explora els temes',()=>setView('topics')));}
+ box.append(actions);log.append(box);}log.scrollTop=log.scrollHeight;}
+function openTopic(id){$('filter').value='';$('module').value='';renderCards();setView('topics');requestAnimationFrame(()=>{const c=$(id);c?.scrollIntoView({block:'center'});c?.focus();});}
+function renderCards(){if(!engine)return;const list=engine.entries.filter(e=>(!$('module').value||e.module===$('module').value)&&normalize(e.title+' '+e.keywords.join(' ')).includes(normalize($('filter').value)));$('cards').replaceChildren();$('count').textContent=`${list.length} conceptes · ${engine.modules.length} tema${engine.modules.length===1?'':'s'}`;for(const [i,e] of list.entries()){const card=el('article',null,'concept-card');card.id=e.id;card.tabIndex=-1;card.append(el('span',String(i+1).padStart(2,'0'),'card-number'),el('h3',e.title),el('p',e.shortAnswer));const detail=el('details');detail.append(el('summary','Llegeix l’explicació'),el('p',e.fullAnswer),el('p',e.examples.join(' '),'example'));card.append(detail,button('Obre al xat ↗',()=>showEntry(e.id)));$('cards').append(card);}if(!list.length)$('cards').append(el('p','No hi ha conceptes amb aquest filtre.'));}
+$('new-chat').onclick=()=>select(null);$('explore').onclick=()=>setView('topics');$('back-chat').onclick=()=>{setView('chat');$('question').focus();};$('menu-toggle').onclick=()=>menu(!document.body.classList.contains('menu-open'));$('backdrop').onclick=()=>{menu(false);$('menu-toggle').focus();};document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open')){menu(false);$('menu-toggle').focus();}});
+$('history-search').oninput=renderSidebar;$('filter').oninput=renderCards;$('module').onchange=renderCards;
+$('rename').onclick=()=>{const c=current();if(!c)return;const title=prompt('Nom de la conversa:',c.title);if(!title?.trim())return;c.title=title.trim().slice(0,100);store.save(c);renderSidebar();renderHeader();};
+$('delete').onclick=()=>{const c=current();if(c&&confirm(`Vols eliminar «${c.title}» d’aquest navegador?`)&&store.remove(c.id))select(null);};
+$('chat-form').onsubmit=e=>{e.preventDefault();if(!engine||!$('question').value.trim())return;ask($('question').value);$('question').value='';$('question').focus();};$('question').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();$('chat-form').requestSubmit();}};
+window.addEventListener('storage',e=>{if(e.key!==null&&!e.key.startsWith(PREFIX))return;if(activeId&&!current()){activeId=null;remember();}renderSidebar();renderHeader();renderMessages();});
+renderSidebar();
+try{const r=await fetch(new URL('../knowledge.json',import.meta.url));if(!r.ok)throw Error(r.status);const modules=await r.json();engine=createEngine(modules);for(const m of modules){const o=el('option',m.title);o.value=m.id;$('module').append(o);}$('module-label').hidden=modules.length<2;$('available').textContent=modules.map(m=>m.title).join(' · ');$('question').disabled=false;$('send').disabled=false;
+ // Recupera les respostes de l’antiga sessió, sense inventar preguntes que no es desaven.
+ const legacyKey='tecnobot:v1:'+new URL('../',import.meta.url).pathname;
+ try{const old=JSON.parse(sessionStorage.getItem(legacyKey)||'null');if(Array.isArray(old)&&old.length){const messages=old.filter(m=>m&&(m.kind==='unknown'||(m.kind==='answer'&&engine.entries.some(e=>e.id===m.id)&&['shortAnswer','easyAnswer','fullAnswer','examples','related'].includes(m.mode))||(m.kind==='clarify'&&Array.isArray(m.ids)&&m.ids.every(id=>typeof id==='string'))));if(messages.length&&store.save({id:'legacy-session',title:'Conversa anterior',updatedAt:Date.now(),messages}))sessionStorage.removeItem(legacyKey);}}catch{}
+ try{activeId=sessionStorage.getItem(activeKey)||null;}catch{}if(!activeId||!current())activeId=store.list()[0]?.id||null;remember();renderSidebar();renderHeader();renderCards();renderMessages();if(location.hash&&engine.entries.some(e=>e.id===location.hash.slice(1)))openTopic(location.hash.slice(1));
+}catch(error){$('load-error').hidden=false;$('available').textContent='Continguts no disponibles';if(debug)console.error(error);}

@@ -2,6 +2,10 @@
 
 Assistent de Tecnologia i Digitalització per a 3r d’ESO. Cerca local determinista, sense IA, API keys ni enviament de preguntes. Inclou 47 conceptes d’Estructures i una interfície coherent amb [3tec_sa1](https://github.com/aagust11/3tec_sa1).
 
+## Converses
+
+Xat a pantalla completa amb historial local: crea, cerca, reprèn, reanomena i elimina converses. Les preguntes i respostes es conserven en aquest navegador amb `localStorage`. No es sincronitzen entre dispositius; esborrar les dades del navegador elimina l’historial. La biblioteca de temes és accessible des del lateral.
+
 ## Desenvolupament
 
 Requisits: Node.js 22 o posterior. No cal instal·lar dependències.
@@ -25,3 +29,4 @@ Adreça prevista: https://aagust11.github.io/tecnobot/ (disponible quan Pages es
 Crea `knowledge/<tema>/concepts.json`. El build el descobrirà automàticament. El mateix contingut alimenta les targetes i el xat. Consulta [la guia completa](docs/TECNOBOT.md).
 
 `3tec_sa1` s’ha consultat com a referència, sense modificar-lo. No hi ha sincronització automàtica amb aquell repositori.
+
