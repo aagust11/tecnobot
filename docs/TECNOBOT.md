@@ -108,3 +108,11 @@ Configura **Settings → Pages → Source: GitHub Actions**. No cal Vite, backen
 
 Abans de distribuir l’URL, comprova el desplegament, les preguntes, els aclariments, els botons, els enllaços, la recàrrega, el teclat i el mòbil. A Network, enviar preguntes no ha de generar cap petició externa.
 
+
+## Explicacions desenvolupades i seguiments
+
+El mòdul d’Estructures conté 53 entrades. Les respostes noves mostren `fullAnswer` d’entrada, separada en paràgrafs i apartats de text segur. «Resum» recupera `shortAnswer`; «Més fàcil» i «Exemples» mantenen els seus camps específics. Les converses anteriors conserven el mode que tenien seleccionat.
+
+`src/engine/follow-up.js` reconeix ordres breus com «posa’m un exemple», «més fàcil», «resumeix» i «amplia» sobre l’última resposta de la conversa activa. Sense aquest referent, no n’inventa cap. Una pregunta que incorpora un concepte nou torna al cercador. Aquest seguiment és determinista, sense IA, i no interpreta referències lliures arbitràries.
+
+S’han afegit guies de vectors, estabilitat, flexió i metodologia experimental; ampliacions de molles, paper, suports i Leonardo; i entrades de massa/pes i fallades. Les guies es basen en els protocols consultats del repositori de referència. `3tec_sa1` no s’ha modificat.

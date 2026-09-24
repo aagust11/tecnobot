@@ -1,6 +1,6 @@
 # TecnoBot
 
-Assistent de Tecnologia i Digitalització per a 3r d’ESO. Cerca local determinista, sense IA, API keys ni enviament de preguntes. Inclou 47 conceptes d’Estructures i una interfície coherent amb [3tec_sa1](https://github.com/aagust11/3tec_sa1).
+Assistent de Tecnologia i Digitalització per a 3r d’ESO. Cerca local determinista, sense IA, API keys ni enviament de preguntes. Inclou 53 conceptes d’Estructures i una interfície coherent amb [3tec_sa1](https://github.com/aagust11/3tec_sa1).
 
 ## Converses
 
@@ -30,3 +30,5 @@ Crea `knowledge/<tema>/concepts.json`. El build el descobrirà automàticament. 
 
 `3tec_sa1` s’ha consultat com a referència, sense modificar-lo. No hi ha sincronització automàtica amb aquell repositori.
 
+
+Les respostes inclouen explicacions desenvolupades i guies de laboratori. Pots demanar «més fàcil», «posa’m un exemple» o «resumeix» per continuar sobre el darrer concepte.

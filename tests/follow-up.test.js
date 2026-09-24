@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {followUpMode} from '../src/engine/follow-up.js';
+import {loadKnowledge} from '../scripts/validate.mjs';
+import {createEngine} from '../src/engine/search-engine.js';
+const engine=createEngine(await loadKnowledge());
+for(const [q,mode] of [['posa’m un exemple','examples'],['MÉS FÀCIL','easyAnswer'],['resumeix','shortAnswer'],['amplia','fullAnswer']])test('seguiment: '+q,()=>assert.equal(followUpMode(q,'structures.tension'),mode));
+test('sense context no inventa un referent',()=>assert.equal(followUpMode('un exemple',null),null));
+test('una pregunta nova no es tracta com a seguiment',()=>assert.equal(followUpMode('un exemple de compressió','structures.tension'),null));
+for(const [q,id] of [['com funciona el laboratori d estabilitat','stability-lab'],['com funciona el laboratori de flexio','bending-lab'],['com funciona el laboratori de vectors','force-vectors-lab'],['com faig les conclusions del laboratori','lab-method'],['diferencia massa pes','mass-weight']])test('guia: '+q,()=>{const r=engine.search(q);assert.equal(r.id,'structures.'+id);assert.notEqual(r.status,'unknown');});

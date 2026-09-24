@@ -50,7 +50,7 @@
       ],
       "shortAnswer": "Una estructura és el conjunt d’elements que suporta càrregues i manté la forma d’un objecte.",
       "easyAnswer": "És l’esquelet que aguanta un objecte.",
-      "fullAnswer": "Ha de resistir les forces previstes, limitar les deformacions i mantenir-se estable. No sempre es veu: una cadira, una bicicleta i un edifici tenen estructura.",
+      "fullAnswer": "Ha de resistir les forces previstes, limitar les deformacions i mantenir-se estable. No sempre es veu: una cadira, una bicicleta i un edifici tenen estructura.\n\nCom analitzar un objecte\nIdentifica primer què ha de suportar i quins elements transmeten aquestes forces. Segueix el recorregut de la càrrega: en una cadira, el seient rep el pes, les unions el transmeten a les potes i aquestes al terra. Una peça decorativa pot no formar part del sistema resistent.\n\nPer interpretar-ho bé\nMira una taula: si eliminessis el tauler, les potes quedarien ben connectades? Aquesta pregunta ajuda a descobrir que un element pot tenir més d’una funció.",
       "examples": [
         "L’esquelet d’una bicicleta suporta el pes de la persona."
       ],
@@ -84,7 +84,7 @@
       ],
       "shortAnswer": "Una força és una interacció que pot canviar el moviment d’un cos o deformar-lo.",
       "easyAnswer": "És una empenta o una estirada.",
-      "fullAnswer": "Una força té intensitat, direcció i sentit. Es mesura en newtons (N). El pes és la força amb què la gravetat atrau un cos; massa i pes no són el mateix.",
+      "fullAnswer": "Una força té intensitat, direcció i sentit. Es mesura en newtons (N). El pes és la força amb què la gravetat atrau un cos; massa i pes no són el mateix.\n\nCom representar una força\nDibuixa una fletxa al punt d’aplicació. La longitud representa el mòdul segons una escala; la recta indica la direcció i la punta, el sentit. Vertical és una direcció; cap amunt i cap avall són sentits oposats. Un cos quiet també rep forces: en un llibre sobre una taula, la força de suport compensa el pes.\n\nPer interpretar-ho bé\nAmb una escala d’1 cm per cada 10 N, una força de 50 N es dibuixa amb una fletxa de 5 cm. No confonguis el dibuix a escala amb la longitud real d’una peça.",
       "examples": [
         "Quan empenys una porta hi apliques una força."
       ],
@@ -117,7 +117,7 @@
       ],
       "shortAnswer": "Les càrregues són les forces que actuen sobre una estructura.",
       "easyAnswer": "Són les forces que l’estructura ha d’aguantar.",
-      "fullAnswer": "Hi ha càrregues permanents, com el pes propi, i variables, com les persones, la neu o el vent. Cal tenir en compte on actuen i com es transmeten fins al terreny.",
+      "fullAnswer": "Hi ha càrregues permanents, com el pes propi, i variables, com les persones, la neu o el vent. Cal tenir en compte on actuen i com es transmeten fins al terreny.\n\nSegueix el camí de les càrregues\nEn un edifici entramat, les càrregues dels pisos passen als forjats, després a bigues i pilars i finalment als fonaments i al terreny. Una força pot actuar verticalment, com el pes, o lateralment, com part de l’acció del vent. Per analitzar una estructura no basta sumar pesos: també importa on s’apliquen.\n\nPer interpretar-ho bé\nUna prestatgeria pot aguantar els llibres i deformar-se lateralment si l’empenys. Són situacions de càrrega diferents.",
       "examples": [
         "En un pont, el pes del tauler és permanent i el dels vehicles és variable."
       ],
@@ -148,7 +148,7 @@
       ],
       "shortAnswer": "Els esforços bàsics són tracció, compressió, flexió, torsió i cisallament.",
       "easyAnswer": "Una peça es pot estirar, aixafar, doblegar, torçar o tallar.",
-      "fullAnswer": "Les forces externes originen esforços interns en les peces. Una mateixa peça pot estar sotmesa a més d’un esforç alhora. Identificar-los ajuda a triar material i forma.",
+      "fullAnswer": "Les forces externes originen esforços interns en les peces. Una mateixa peça pot estar sotmesa a més d’un esforç alhora. Identificar-los ajuda a triar material i forma.\n\nExemple proper\nUn prestatge carregat treballa principalment a flexió.\n\nRelaciona les idees\nPots continuar amb Tracció, Compressió, Flexió, Torsió, Cisallament. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un prestatge carregat treballa principalment a flexió."
       ],
@@ -185,7 +185,7 @@
       ],
       "shortAnswer": "La resistència és la capacitat de suportar esforços sense trencar-se.",
       "easyAnswer": "Una peça resistent no es trenca amb la càrrega prevista.",
-      "fullAnswer": "Depèn del material, de la secció, de les unions i del tipus d’esforç. Resistència i rigidesa no són equivalents: una peça es pot deformar molt sense trencar-se.",
+      "fullAnswer": "Depèn del material, de la secció, de les unions i del tipus d’esforç. Resistència i rigidesa no són equivalents: una peça es pot deformar molt sense trencar-se.\n\nCom distingir-la de la rigidesa\nObserva què vols evitar. Si el problema és que una peça es trenca, estudies resistència. Si es doblega massa, estudies rigidesa. Les dues propietats depenen del disseny, però una no substitueix l’altra. Un assaig amb una càrrega petita no demostra que una estructura sigui segura amb càrregues grans.\n\nPer interpretar-ho bé\nUna canya flexible pot doblegar-se sense trencar-se. Un material que sembla molt rígid, com el vidre, es pot fracturar amb poca deformació visible.",
       "examples": [
         "Una corda pot resistir una estirada encara que s’allargui una mica."
       ],
@@ -218,7 +218,7 @@
       ],
       "shortAnswer": "La rigidesa és la capacitat d’oposar-se a la deformació.",
       "easyAnswer": "Una peça rígida canvia poc de forma quan la carregues.",
-      "fullAnswer": "Depèn del material, de la geometria, de la longitud i dels suports. Una biga alta acostuma a flexionar menys que la mateixa biga col·locada plana. Una peça rígida també es pot trencar.",
+      "fullAnswer": "Depèn del material, de la geometria, de la longitud i dels suports. Una biga alta acostuma a flexionar menys que la mateixa biga col·locada plana. Una peça rígida també es pot trencar.\n\nPer què la forma canvia el resultat\nLa rigidesa d’una peça no és només una propietat del material. Un mateix regle, amb els mateixos suports i càrrega, es deforma menys de cantell que pla. En canviar l’orientació redistribueixes la secció respecte de la direcció de flexió. Plegar una làmina també pot augmentar la rigidesa en una direcció.\n\nPer interpretar-ho bé\nPer comparar dos perfils, mantén constants material, quantitat de material, llum i càrrega. Si canvies tot alhora, no sabràs què ha causat el resultat.",
       "examples": [
         "Un regle posat de cantell es doblega menys que posat pla."
       ],
@@ -253,7 +253,7 @@
       ],
       "shortAnswer": "L’estabilitat és la capacitat de mantenir l’equilibri sense bolcar.",
       "easyAnswer": "Una estructura estable no tomba fàcilment.",
-      "fullAnswer": "Una base ampla i un centre de gravetat baix acostumen a millorar l’estabilitat. En repòs, si només considerem el pes, la seva línia d’acció ha de quedar dins la base de sustentació per no bolcar. El vent també pot provocar bolcada.",
+      "fullAnswer": "Una base ampla i un centre de gravetat baix acostumen a millorar l’estabilitat. En repòs, si només considerem el pes, la seva línia d’acció ha de quedar dins la base de sustentació per no bolcar. El vent també pot provocar bolcada.\n\nCom raonar una bolcada\nDibuixa la base i la vertical que passa pel centre de gravetat. En el model estàtic sota el pes, la bolcada es produeix quan aquesta línia surt de la base. Una inclinació, una càrrega descentrada o una empenta poden reduir el marge. Si el cos llisca abans, ja no compleix la hipòtesi del model de bolcada sense lliscament.\n\nPer interpretar-ho bé\nPer millorar una torre de maqueta, compara ampliar la base, baixar massa i afegir ancoratges. Explica quina causa de la bolcada modifica cadascuna de les solucions.",
       "examples": [
         "Un tamboret ample i baix és més difícil de bolcar que un de molt alt i estret."
       ],
@@ -286,7 +286,7 @@
       ],
       "shortAnswer": "El centre de gravetat és el punt on podem considerar aplicat el pes total d’un cos.",
       "easyAnswer": "És el punt des d’on podem imaginar que estira tot el seu pes.",
-      "fullAnswer": "La posició depèn de com està repartida la massa. Baixar-lo acostuma a augmentar l’estabilitat. Pot quedar fora del material, com en un anell.",
+      "fullAnswer": "La posició depèn de com està repartida la massa. Baixar-lo acostuma a augmentar l’estabilitat. Pot quedar fora del material, com en un anell.\n\nExemple proper\nUna grua porta contrapesos per compensar el moment de la càrrega.\n\nRelaciona les idees\nPots continuar amb Estabilitat, Base de sustentació. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una grua porta contrapesos per compensar el moment de la càrrega."
       ],
@@ -318,7 +318,7 @@
       ],
       "shortAnswer": "La base de sustentació és la zona delimitada pels punts de suport d’un cos.",
       "easyAnswer": "És la superfície entre els punts on l’objecte es recolza.",
-      "fullAnswer": "En una cadira inclou l’àrea entre les quatre potes. Com més marge hi ha entre la projecció del centre de gravetat i la vora, més costa bolcar-la en aquella direcció.",
+      "fullAnswer": "En una cadira inclou l’àrea entre les quatre potes. Com més marge hi ha entre la projecció del centre de gravetat i la vora, més costa bolcar-la en aquella direcció.\n\nExemple proper\nSeparar els peus amplia la teva base de sustentació.\n\nRelaciona les idees\nPots continuar amb Centre de gravetat, Estabilitat. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Separar els peus amplia la teva base de sustentació."
       ],
@@ -351,7 +351,7 @@
       ],
       "shortAnswer": "Una deformació és un canvi de forma o de dimensions. Pot ser reversible o permanent.",
       "easyAnswer": "Si recupera la forma és elàstica; si queda deformada és plàstica.",
-      "fullAnswer": "La deformació elàstica desapareix en retirar la càrrega, dins del límit elàstic. La plàstica deixa un canvi permanent. Si l’esforç és excessiu, el material pot trencar-se.",
+      "fullAnswer": "La deformació elàstica desapareix en retirar la càrrega, dins del límit elàstic. La plàstica deixa un canvi permanent. Si l’esforç és excessiu, el material pot trencar-se.\n\nExemple proper\nUna molla es recupera; un clip doblegat massa queda tort.\n\nRelaciona les idees\nPots continuar amb Rigidesa, Resistència. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una molla es recupera; un clip doblegat massa queda tort."
       ],
@@ -387,7 +387,7 @@
       ],
       "shortAnswer": "La tracció és un esforç que tendeix a estirar una peça.",
       "easyAnswer": "Dues forces estiren la peça cap a costats oposats.",
-      "fullAnswer": "Les forces tendeixen a allargar-la. Els cables i tirants són adequats per treballar a tracció. Un cable flexible no pot substituir un pilar que ha de treballar a compressió.",
+      "fullAnswer": "Les forces tendeixen a allargar-la. Els cables i tirants són adequats per treballar a tracció. Un cable flexible no pot substituir un pilar que ha de treballar a compressió.\n\nExemple proper\nEls cables d’un pont penjant treballen principalment a tracció.\n\nRelaciona les idees\nPots continuar amb Compressió, Tirants i tensors. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Els cables d’un pont penjant treballen principalment a tracció."
       ],
@@ -423,7 +423,7 @@
       ],
       "shortAnswer": "La compressió és un esforç que tendeix a escurçar o aixafar una peça.",
       "easyAnswer": "Dues forces empenyen la peça cap endins.",
-      "fullAnswer": "Els pilars solen treballar principalment a compressió. Si una peça comprimida és llarga i prima, pot patir vinclament: es corba lateralment abans d’esgotar la resistència del material.",
+      "fullAnswer": "Els pilars solen treballar principalment a compressió. Si una peça comprimida és llarga i prima, pot patir vinclament: es corba lateralment abans d’esgotar la resistència del material.\n\nUna peça comprimida no sempre falla aixafant-se\nUna barra curta i gruixuda i una barra llarga i prima del mateix material poden fallar de manera diferent. La segona pot corbar-se lateralment per vinclament. Per això afegir material o triar-ne un de més resistent no resol necessàriament una geometria massa esvelta.\n\nPer interpretar-ho bé\nObserva una palleta mentre la comprimeixes suaument pels extrems: si es desvia lateralment, estàs veient una inestabilitat. No és un sisè esforç bàsic.",
       "examples": [
         "Una columna suporta a compressió el pes que rep de dalt."
       ],
@@ -457,7 +457,7 @@
       ],
       "shortAnswer": "La flexió és un esforç que tendeix a doblegar una peça.",
       "easyAnswer": "La peça es corba, com un prestatge amb llibres.",
-      "fullAnswer": "En una biga sotmesa a flexió, una zona s’estira i una altra es comprimeix. La deformació depèn de la càrrega, de la distància entre suports, del material i de la secció.",
+      "fullAnswer": "En una biga sotmesa a flexió, una zona s’estira i una altra es comprimeix. La deformació depèn de la càrrega, de la distància entre suports, del material i de la secció.\n\nQuè passa dins la biga\nEn el cas habitual d’una biga recolzada pels extrems i carregada cap avall al centre, la part superior es comprimeix i la inferior es tensa. Entre les dues hi ha una zona que no s’allarga longitudinalment en el model ideal de flexió. Aquesta distribució pot canviar si canvies els recolzaments o el sentit de la càrrega.\n\nPer interpretar-ho bé\nPer reduir la deformació, pots augmentar l’altura de la secció o acostar els suports. Si compares alternatives, modifica una sola variable i registra la fletxa al centre.",
       "examples": [
         "Un regle recolzat pels extrems es doblega si el prems al centre."
       ],
@@ -490,7 +490,7 @@
       ],
       "shortAnswer": "La torsió és un esforç que tendeix a retorçar una peça sobre el seu eix.",
       "easyAnswer": "Un extrem gira respecte de l’altre.",
-      "fullAnswer": "Apareix quan actuen moments que fan girar seccions de la peça respecte d’altres. És habitual en eixos que transmeten moviment.",
+      "fullAnswer": "Apareix quan actuen moments que fan girar seccions de la peça respecte d’altres. És habitual en eixos que transmeten moviment.\n\nExemple proper\nLa tija d’un tornavís treballa a torsió quan colles un cargol.\n\nRelaciona les idees\nPots continuar amb Tipus d’esforços, Cisallament. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "La tija d’un tornavís treballa a torsió quan colles un cargol."
       ],
@@ -523,7 +523,7 @@
       ],
       "shortAnswer": "El cisallament tendeix a fer lliscar una part de la peça respecte d’una altra.",
       "easyAnswer": "Dues parts de la peça intenten lliscar en sentits contraris.",
-      "fullAnswer": "Les forces actuen paral·leles a la secció que es podria tallar. Apareix en reblons, cargols d’unió i en tallar amb tisores.",
+      "fullAnswer": "Les forces actuen paral·leles a la secció que es podria tallar. Apareix en reblons, cargols d’unió i en tallar amb tisores.\n\nExemple proper\nLes tisores sotmeten el paper a cisallament.\n\nRelaciona les idees\nPots continuar amb Tipus d’esforços, Unions. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Les tisores sotmeten el paper a cisallament."
       ],
@@ -568,7 +568,7 @@
       ],
       "shortAnswer": "La triangulació aporta rigidesa: un triangle no canvia de forma sense canviar la longitud d’algun costat.",
       "easyAnswer": "Una diagonal transforma un marc que es mou en dos triangles més rígids.",
-      "fullAnswer": "Un quadrilàter amb unions articulades es pot deformar sense variar la longitud de les barres. Afegir una diagonal ho impedeix en el model ideal. A la realitat també importen les unions, la resistència i el vinclament de les barres: posar triangles no garanteix resistència il·limitada.",
+      "fullAnswer": "Un quadrilàter amb unions articulades es pot deformar sense variar la longitud de les barres. Afegir una diagonal ho impedeix en el model ideal. A la realitat també importen les unions, la resistència i el vinclament de les barres: posar triangles no garanteix resistència il·limitada.\n\nPer què el triangle funciona\nImagina quatre varetes unides amb articulacions: el rectangle es pot convertir en un rombe sense allargar-les. En afegir una diagonal, el moviment obligaria a canviar la longitud d’alguna barra. Amb les longituds fixades, els triangles determinen la forma. Això explica l’augment de rigidesa geomètrica.\n\nPer interpretar-ho bé\nEl model té límits: les barres reals es deformen i les unions poden lliscar. Una diagonal de cable només treballa quan està tibant; si es destensa, pot deixar moure el marc en l’altre sentit. Per això cal distingir barra rígida i cable.",
       "examples": [
         "Les torres, grues i molts ponts incorporen triangles per limitar la deformació."
       ],
@@ -604,7 +604,7 @@
       ],
       "shortAnswer": "Resistència: no trencar-se. Rigidesa: deformar-se poc. Estabilitat: no bolcar.",
       "easyAnswer": "Una estructura ha d’aguantar, mantenir la forma i no tombar.",
-      "fullAnswer": "Són propietats diferents. Una cadira pot ser rígida però bolcar fàcilment; una corda pot ser resistent i flexible. Millorar una propietat no millora automàticament les altres.",
+      "fullAnswer": "Són propietats diferents. Una cadira pot ser rígida però bolcar fàcilment; una corda pot ser resistent i flexible. Millorar una propietat no millora automàticament les altres.\n\nExemple proper\nUna torre molt rígida pot bolcar si la base és massa estreta.\n\nRelaciona les idees\nPots continuar amb Resistència, Rigidesa, Estabilitat. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una torre molt rígida pot bolcar si la base és massa estreta."
       ],
@@ -639,7 +639,7 @@
       ],
       "shortAnswer": "Les estructures naturals es formen a la natura sense haver estat construïdes per persones.",
       "easyAnswer": "La natura també té estructures que aguanten i protegeixen.",
-      "fullAnswer": "Poden suportar pes, mantenir la forma o protegir organismes. Observar-les inspira solucions tècniques, però els materials i processos no són necessàriament els mateixos.",
+      "fullAnswer": "Poden suportar pes, mantenir la forma o protegir organismes. Observar-les inspira solucions tècniques, però els materials i processos no són necessàriament els mateixos.\n\nExemple proper\nUn esquelet, un tronc i la closca d’un ou són exemples naturals.\n\nRelaciona les idees\nPots continuar amb Estructures artificials, Estructures laminars. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un esquelet, un tronc i la closca d’un ou són exemples naturals."
       ],
@@ -671,7 +671,7 @@
       ],
       "shortAnswer": "Les estructures artificials són dissenyades i construïdes per persones.",
       "easyAnswer": "Les fem per aguantar, protegir o salvar distàncies.",
-      "fullAnswer": "Poden ser massisses, entramades, triangulades, penjants o laminars, entre d’altres. Una construcció pot combinar diversos tipus.",
+      "fullAnswer": "Poden ser massisses, entramades, triangulades, penjants o laminars, entre d’altres. Una construcció pot combinar diversos tipus.\n\nExemple proper\nUna cadira, un pont i una torre elèctrica són artificials.\n\nRelaciona les idees\nPots continuar amb Tipus d’estructures, Estructures naturals. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una cadira, un pont i una torre elèctrica són artificials."
       ],
@@ -703,7 +703,7 @@
       ],
       "shortAnswer": "Alguns tipus són massisses, entramades, triangulades, penjants i laminars.",
       "easyAnswer": "Es classifiquen segons com estan construïdes i aguanten les càrregues.",
-      "fullAnswer": "No són categories sempre excloents. Un pont pot combinar un tauler entramat, tirants i pilars massissos. També hi ha estructures pneumàtiques i geodèsiques.",
+      "fullAnswer": "No són categories sempre excloents. Un pont pot combinar un tauler entramat, tirants i pilars massissos. També hi ha estructures pneumàtiques i geodèsiques.\n\nExemple proper\nUn edifici de pilars i bigues és entramat; una llauna és laminar.\n\nRelaciona les idees\nPots continuar amb Estructures massisses, Estructures entramades, Triangulació i rigidesa, Estructures penjants, Estructures laminars. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un edifici de pilars i bigues és entramat; una llauna és laminar."
       ],
@@ -739,7 +739,7 @@
       ],
       "shortAnswer": "Les estructures massisses tenen molt volum de material i suporten càrregues gràcies a la seva massa i forma.",
       "easyAnswer": "Són construccions amb una gran quantitat de material.",
-      "fullAnswer": "Sovint treballen principalment a compressió. Necessiten una base i un terreny adequats per transmetre el seu pes. No totes són completament plenes.",
+      "fullAnswer": "Sovint treballen principalment a compressió. Necessiten una base i un terreny adequats per transmetre el seu pes. No totes són completament plenes.\n\nExemple proper\nUna piràmide o una presa de gravetat són exemples.\n\nRelaciona les idees\nPots continuar amb Tipus d’estructures, Compressió. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una piràmide o una presa de gravetat són exemples."
       ],
@@ -772,7 +772,7 @@
       ],
       "shortAnswer": "Les estructures entramades formen un esquelet de pilars i bigues units.",
       "easyAnswer": "Són una xarxa de peces que aguanta l’edifici.",
-      "fullAnswer": "Les bigues reben càrregues dels forjats i les transmeten als pilars; aquests les porten als fonaments. Les unions i els reforços han de garantir l’estabilitat davant forces laterals.",
+      "fullAnswer": "Les bigues reben càrregues dels forjats i les transmeten als pilars; aquests les porten als fonaments. Les unions i els reforços han de garantir l’estabilitat davant forces laterals.\n\nExemple proper\nMolts edificis de formigó armat tenen una estructura entramada.\n\nRelaciona les idees\nPots continuar amb Bigues, Pilars i columnes, Fonaments, Laminar o entramada?. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Molts edificis de formigó armat tenen una estructura entramada."
       ],
@@ -807,7 +807,7 @@
       ],
       "shortAnswer": "Les estructures penjants sostenen càrregues mitjançant cables o altres elements a tracció.",
       "easyAnswer": "Les càrregues pengen de cables ben ancorats.",
-      "fullAnswer": "Els cables transmeten les forces als suports i ancoratges. Els pilars solen rebre compressió. Un pont penjant i un pont atirantat tenen disposicions diferents dels cables.",
+      "fullAnswer": "Els cables transmeten les forces als suports i ancoratges. Els pilars solen rebre compressió. Un pont penjant i un pont atirantat tenen disposicions diferents dels cables.\n\nExemple proper\nUn pont penjant té el tauler suspès de cables.\n\nRelaciona les idees\nPots continuar amb Tirants i tensors, Tracció, Ponts. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un pont penjant té el tauler suspès de cables."
       ],
@@ -841,7 +841,7 @@
       ],
       "shortAnswer": "Les estructures laminars utilitzen làmines o superfícies primes per suportar càrregues.",
       "easyAnswer": "La pell de l’objecte també fa d’estructura.",
-      "fullAnswer": "La forma, les corbes, els plecs i els nervis poden donar rigidesa amb poc material. Una làmina plana prima pot doblegar-se fàcilment.",
+      "fullAnswer": "La forma, les corbes, els plecs i els nervis poden donar rigidesa amb poc material. Una làmina plana prima pot doblegar-se fàcilment.\n\nExemple proper\nUna llauna, la closca d’un ou o una carrosseria poden actuar com estructures laminars.\n\nRelaciona les idees\nPots continuar amb Perfils estructurals, Laminar o entramada?. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una llauna, la closca d’un ou o una carrosseria poden actuar com estructures laminars."
       ],
@@ -873,7 +873,7 @@
       ],
       "shortAnswer": "Una estructura laminar suporta amb superfícies; una entramada, amb un esquelet de barres.",
       "easyAnswer": "Una llauna aguanta amb la pell; un edifici entramat, amb pilars i bigues.",
-      "fullAnswer": "La diferència és el sistema que transmet les càrregues. Una coberta pot combinar làmines amb un entramat de suport: cal observar què fa cada element.",
+      "fullAnswer": "La diferència és el sistema que transmet les càrregues. Una coberta pot combinar làmines amb un entramat de suport: cal observar què fa cada element.\n\nExemple proper\nCompara una llauna buida amb un marc de fusta.\n\nRelaciona les idees\nPots continuar amb Estructures laminars, Estructures entramades. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Compara una llauna buida amb un marc de fusta."
       ],
@@ -906,7 +906,7 @@
       ],
       "shortAnswer": "Les estructures pneumàtiques mantenen la forma gràcies a la pressió d’un gas.",
       "easyAnswer": "L’aire de dins ajuda a mantenir-les dretes.",
-      "fullAnswer": "La membrana treballa a tracció i la pressió interior ajuda a estabilitzar-la. Si perd pressió, pot perdre forma i capacitat de suport.",
+      "fullAnswer": "La membrana treballa a tracció i la pressió interior ajuda a estabilitzar-la. Si perd pressió, pot perdre forma i capacitat de suport.\n\nExemple proper\nUna coberta inflable és una estructura pneumàtica.\n\nRelaciona les idees\nPots continuar amb Tracció, Estructures laminars. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una coberta inflable és una estructura pneumàtica."
       ],
@@ -938,7 +938,7 @@
       ],
       "shortAnswer": "Una estructura geodèsica forma una superfície corba amb una xarxa de barres, sovint triangles.",
       "easyAnswer": "Molts triangles formen una cúpula.",
-      "fullAnswer": "La geometria reparteix les càrregues entre barres. Les unions i els ancoratges són essencials. No s’ha de confondre la xarxa de barres amb una closca contínua.",
+      "fullAnswer": "La geometria reparteix les càrregues entre barres. Les unions i els ancoratges són essencials. No s’ha de confondre la xarxa de barres amb una closca contínua.\n\nExemple proper\nUna cúpula geodèsica d’un hivernacle.\n\nRelaciona les idees\nPots continuar amb Triangulació i rigidesa, Unions. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una cúpula geodèsica d’un hivernacle."
       ],
@@ -970,7 +970,7 @@
       ],
       "shortAnswer": "Una biga és un element que rep càrregues transversals i acostuma a treballar a flexió.",
       "easyAnswer": "És una peça que salva una distància entre suports.",
-      "fullAnswer": "Sovint és horitzontal, però també pot ser inclinada. Transmet càrregues als suports i pot suportar diversos esforços alhora. Reduir la llum entre suports redueix habitualment la flexió.",
+      "fullAnswer": "Sovint és horitzontal, però també pot ser inclinada. Transmet càrregues als suports i pot suportar diversos esforços alhora. Reduir la llum entre suports redueix habitualment la flexió.\n\nExemple proper\nLa peça que sosté un prestatge o una coberta pot fer de biga.\n\nRelaciona les idees\nPots continuar amb Flexió, Pilars i columnes, Perfils estructurals. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "La peça que sosté un prestatge o una coberta pot fer de biga."
       ],
@@ -1004,7 +1004,7 @@
       ],
       "shortAnswer": "Els pilars i les columnes transmeten càrregues cap als fonaments i solen treballar a compressió.",
       "easyAnswer": "Són suports que porten el pes cap avall.",
-      "fullAnswer": "Una columna sol designar un suport de secció circular; pilar és un terme més general. També poden rebre flexió, sobretot amb forces laterals o càrregues descentrades.",
+      "fullAnswer": "Una columna sol designar un suport de secció circular; pilar és un terme més general. També poden rebre flexió, sobretot amb forces laterals o càrregues descentrades.\n\nExemple proper\nEls pilars d’un aparcament sostenen els forjats.\n\nRelaciona les idees\nPots continuar amb Compressió, Vinclament, Fonaments. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Els pilars d’un aparcament sostenen els forjats."
       ],
@@ -1039,7 +1039,7 @@
       ],
       "shortAnswer": "Un tirant és un element que treballa a tracció per sostenir o estabilitzar una estructura.",
       "easyAnswer": "És una peça tibant que subjecta una altra peça.",
-      "fullAnswer": "Pot ser un cable o una barra. Un tensor permet ajustar la tensió d’un tirant. Els punts d’ancoratge han de resistir les forces que reben.",
+      "fullAnswer": "Pot ser un cable o una barra. Un tensor permet ajustar la tensió d’un tirant. Els punts d’ancoratge han de resistir les forces que reben.\n\nExemple proper\nEls vents d’una tenda de campanya fan de tirants.\n\nRelaciona les idees\nPots continuar amb Tracció, Estructures penjants. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Els vents d’una tenda de campanya fan de tirants."
       ],
@@ -1071,7 +1071,7 @@
       ],
       "shortAnswer": "Un arc és un element corbat que pot transmetre càrregues als suports principalment per compressió.",
       "easyAnswer": "La forma corba condueix el pes cap als costats.",
-      "fullAnswer": "En un arc de dovelles, les peces s’empenyen les unes a les altres. Els suports han de resistir també l’empenta lateral. No n’hi ha prou amb donar forma corba a qualsevol material.",
+      "fullAnswer": "En un arc de dovelles, les peces s’empenyen les unes a les altres. Els suports han de resistir també l’empenta lateral. No n’hi ha prou amb donar forma corba a qualsevol material.\n\nEl paper dels suports\nLes peces d’un arc de pedra es transmeten forces per contacte. L’arc empeny els suports també lateralment, i aquests han d’impedir que s’obrin. Durant la construcció, una cintra sosté provisionalment les peces. La clau tanca el conjunt, però no és una peça màgica que suporti tota sola la construcció.\n\nPer interpretar-ho bé\nSi els suports d’una maqueta d’arc se separen, l’arc pot perdre l’equilibri encara que cap dovella s’hagi trencat. Distingir fallada del material i pèrdua d’equilibri és essencial.",
       "examples": [
         "Els arcs de pedra d’un pont transmeten càrregues als pilars."
       ],
@@ -1103,7 +1103,7 @@
       ],
       "shortAnswer": "Una volta és una coberta corba que pot entendre’s com una extensió d’un arc.",
       "easyAnswer": "És una mena d’arc que s’allarga per cobrir un espai.",
-      "fullAnswer": "Les voltes de fàbrica treballen principalment a compressió i transmeten empentes als suports. Una cúpula cobreix un espai mitjançant una superfície corba en diverses direccions.",
+      "fullAnswer": "Les voltes de fàbrica treballen principalment a compressió i transmeten empentes als suports. Una cúpula cobreix un espai mitjançant una superfície corba en diverses direccions.\n\nExemple proper\nUna volta de canó cobreix un passadís.\n\nRelaciona les idees\nPots continuar amb Arcs, Compressió. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una volta de canó cobreix un passadís."
       ],
@@ -1137,7 +1137,7 @@
       ],
       "shortAnswer": "Un perfil estructural és una peça amb una secció dissenyada per suportar esforços amb un ús eficient del material.",
       "easyAnswer": "La forma de la secció ajuda a aguantar amb menys material.",
-      "fullAnswer": "Hi ha perfils en I, U, L i tubulars. En flexió, allunyar material de l’eix neutre augmenta la rigidesa; l’orientació importa. No existeix un perfil òptim per a tots els esforços.",
+      "fullAnswer": "Hi ha perfils en I, U, L i tubulars. En flexió, allunyar material de l’eix neutre augmenta la rigidesa; l’orientació importa. No existeix un perfil òptim per a tots els esforços.\n\nUn exemple que pots comprovar\nRecolza un regle pla entre dos suports i aplica una càrrega petita al centre. Repeteix amb el regle de cantell, sense canviar la llum ni la càrrega. El material és el mateix, però la deformació canvia perquè la secció està orientada d’una altra manera. Els perfils en I aprofiten aquesta idea en una direcció de flexió.\n\nPer interpretar-ho bé\nUn tub no és sempre millor que una barra massissa: cal especificar si compares la mateixa massa, dimensions exteriors, material o esforç. Sense aquestes condicions, la comparació és incompleta.",
       "examples": [
         "Un full plegat en acordió suporta més càrrega que el mateix full pla en certes condicions."
       ],
@@ -1170,7 +1170,7 @@
       ],
       "shortAnswer": "Els reforços són elements que milloren el comportament d’una estructura en punts concrets.",
       "easyAnswer": "Afegim peces on l’estructura necessita ajuda.",
-      "fullAnswer": "Poden ser diagonals, nervis, unions millorades o seccions més grans. Primer cal identificar el problema: bolcada, deformació, trencament o inestabilitat d’una barra.",
+      "fullAnswer": "Poden ser diagonals, nervis, unions millorades o seccions més grans. Primer cal identificar el problema: bolcada, deformació, trencament o inestabilitat d’una barra.\n\nExemple proper\nUna diagonal evita que un marc articulat es deformi com un rombe.\n\nRelaciona les idees\nPots continuar amb Triangulació i rigidesa, Unions. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una diagonal evita que un marc articulat es deformi com un rombe."
       ],
@@ -1203,7 +1203,7 @@
       ],
       "shortAnswer": "Els fonaments transmeten les càrregues de la construcció al terreny.",
       "easyAnswer": "Són la base que reparteix el pes sobre el sòl.",
-      "fullAnswer": "Es dimensionen segons les càrregues i la resistència del terreny. Un suport inadequat pot provocar assentaments desiguals, esquerdes o inestabilitat.",
+      "fullAnswer": "Es dimensionen segons les càrregues i la resistència del terreny. Un suport inadequat pot provocar assentaments desiguals, esquerdes o inestabilitat.\n\nExemple proper\nUna sabata sota un pilar reparteix la seva càrrega en una superfície més gran.\n\nRelaciona les idees\nPots continuar amb Pilars i columnes, Càrregues. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una sabata sota un pilar reparteix la seva càrrega en una superfície més gran."
       ],
@@ -1236,7 +1236,7 @@
       ],
       "shortAnswer": "Un pont permet salvar un obstacle i transmet les càrregues del tauler als suports.",
       "easyAnswer": "És una estructura per passar per damunt d’un obstacle.",
-      "fullAnswer": "Pot utilitzar bigues, arcs, triangles o cables. La forma escollida depèn de la distància, les càrregues, el terreny i els materials. Els camins de càrrega han d’arribar fins als fonaments.",
+      "fullAnswer": "Pot utilitzar bigues, arcs, triangles o cables. La forma escollida depèn de la distància, les càrregues, el terreny i els materials. Els camins de càrrega han d’arribar fins als fonaments.\n\nExemple proper\nUn pont de biga porta la càrrega del tauler als pilars.\n\nRelaciona les idees\nPots continuar amb Bigues, Arcs, Estructures penjants, Triangulació i rigidesa. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un pont de biga porta la càrrega del tauler als pilars."
       ],
@@ -1272,7 +1272,7 @@
       ],
       "shortAnswer": "Les torres i grues han de suportar càrregues i resistir les forces que podrien deformar-les o bolcar-les.",
       "easyAnswer": "Han d’aguantar el pes i mantenir l’equilibri.",
-      "fullAnswer": "Moltes incorporen triangulació, ancoratges o contrapesos. La posició de la càrrega modifica el moment que tendeix a bolcar una grua. El vent també és una càrrega important.",
+      "fullAnswer": "Moltes incorporen triangulació, ancoratges o contrapesos. La posició de la càrrega modifica el moment que tendeix a bolcar una grua. El vent també és una càrrega important.\n\nExemple proper\nUna grua torre combina una gelosia de barres amb contrapesos i fonaments.\n\nRelaciona les idees\nPots continuar amb Triangulació i rigidesa, Estabilitat, Centre de gravetat. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una grua torre combina una gelosia de barres amb contrapesos i fonaments."
       ],
@@ -1305,7 +1305,7 @@
       ],
       "shortAnswer": "El vinclament és una inestabilitat en què una peça comprimida es corba lateralment.",
       "easyAnswer": "Una barra llarga i prima es pot doblegar quan l’aixafes pels extrems.",
-      "fullAnswer": "Depèn de la longitud, la secció, el material i els suports. Una barra pot vinclar abans de trencar-se per compressió directa. Afegir suports laterals pot reduir la longitud lliure.",
+      "fullAnswer": "Depèn de la longitud, la secció, el material i els suports. Una barra pot vinclar abans de trencar-se per compressió directa. Afegir suports laterals pot reduir la longitud lliure.\n\nExemple proper\nUna palleta llarga es corba si la prems pels extrems.\n\nRelaciona les idees\nPots continuar amb Compressió, Pilars i columnes. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Una palleta llarga es corba si la prems pels extrems."
       ],
@@ -1340,7 +1340,7 @@
       ],
       "shortAnswer": "Les unions connecten els elements i transmeten forces entre ells.",
       "easyAnswer": "Les peces han d’estar ben lligades perquè treballin juntes.",
-      "fullAnswer": "Poden ser articulades o rígides en un model estructural. Cargols, reblons, soldadures i adhesius tenen comportaments diferents. Una estructura pot fallar per una unió encara que les barres siguin resistents.",
+      "fullAnswer": "Poden ser articulades o rígides en un model estructural. Cargols, reblons, soldadures i adhesius tenen comportaments diferents. Una estructura pot fallar per una unió encara que les barres siguin resistents.\n\nExemple proper\nUn cargol uneix dues peces i pot suportar cisallament.\n\nRelaciona les idees\nPots continuar amb Cisallament, Triangulació i rigidesa. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un cargol uneix dues peces i pot suportar cisallament."
       ],
@@ -1371,7 +1371,7 @@
       ],
       "shortAnswer": "La llum és la distància lliure entre els recolzaments d’un element.",
       "easyAnswer": "És l’espai que una biga o un pont ha de salvar.",
-      "fullAnswer": "No és necessàriament la longitud total de la peça. Augmentar la llum acostuma a augmentar molt la deformació a flexió si no canviem material, secció ni càrrega.",
+      "fullAnswer": "No és necessàriament la longitud total de la peça. Augmentar la llum acostuma a augmentar molt la deformació a flexió si no canviem material, secció ni càrrega.\n\nExemple proper\nUn pont de paper entre dues taules salva l’espai buit entre les taules.\n\nRelaciona les idees\nPots continuar amb Bigues, Flexió. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Un pont de paper entre dues taules salva l’espai buit entre les taules."
       ],
@@ -1404,7 +1404,7 @@
       ],
       "shortAnswer": "La cintra sosté provisionalment l’arc; les dovelles són les peces, i la clau és la dovella central superior.",
       "easyAnswer": "Un suport provisional aguanta les pedres mentre construïm l’arc.",
-      "fullAnswer": "L’arc funciona com un conjunt: la clau no aguanta tota sola les altres peces. En retirar la cintra, els contactes entre dovelles i els suports han de transmetre les forces.",
+      "fullAnswer": "L’arc funciona com un conjunt: la clau no aguanta tota sola les altres peces. En retirar la cintra, els contactes entre dovelles i els suports han de transmetre les forces.\n\nExemple proper\nEn un arc tradicional, la cintra de fusta es retira quan el conjunt pot sostenir-se.\n\nRelaciona les idees\nPots continuar amb Arcs, Compressió. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "En un arc tradicional, la cintra de fusta es retira quan el conjunt pot sostenir-se."
       ],
@@ -1436,7 +1436,7 @@
       ],
       "shortAnswer": "Un forjat forma un pis o una coberta i transmet les càrregues als elements de suport.",
       "easyAnswer": "És el conjunt estructural que aguanta un pis.",
-      "fullAnswer": "No és només el paviment visible. Pot incloure biguetes, peces d’entrebigat i una capa de formigó, segons el sistema constructiu.",
+      "fullAnswer": "No és només el paviment visible. Pot incloure biguetes, peces d’entrebigat i una capa de formigó, segons el sistema constructiu.\n\nExemple proper\nLes persones i els mobles carreguen un forjat que transmet forces a bigues o murs.\n\nRelaciona les idees\nPots continuar amb Estructures entramades, Bigues. Compara què explica cada concepte en aquest exemple.",
       "examples": [
         "Les persones i els mobles carreguen un forjat que transmet forces a bigues o murs."
       ],
@@ -1470,7 +1470,7 @@
       ],
       "shortAnswer": "Compara dos fulls iguals, un pla i un plegat, amb la mateixa distància entre suports i la mateixa càrrega.",
       "easyAnswer": "Canvia només la forma del paper i observa quin es doblega menys.",
-      "fullAnswer": "Mantén constants el paper, la llum i la plataforma de càrrega. Mesura l’altura al centre abans i després de carregar: la diferència és la fletxa. Atura’t si hi ha plecs permanents o lliscament. No inventis una mesura si el model no suporta la càrrega.",
+      "fullAnswer": "Mantén constants el paper, la llum i la plataforma de càrrega. Mesura l’altura al centre abans i després de carregar: la diferència és la fletxa. Atura’t si hi ha plecs permanents o lliscament. No inventis una mesura si el model no suporta la càrrega.\n\nProtocol per comparar perfils\n1. Prepara dos fulls iguals: un pla i l’altre amb plecs longitudinals, sense afegir cinta ni retallar.\n2. Fixa la mateixa llum i el mateix punt de càrrega.\n3. Mesura l’altura del centre sense càrrega.\n4. Col·loca la mateixa plataforma i massa en tots dos models.\n5. Mesura l’altura carregada i calcula la diferència.\n6. Compara només càrregues que tots dos hagin suportat.\n\nPer interpretar-ho bé\nRegistra perfil, llum, massa total, altura inicial, altura final i fletxa amb unitats. Tres lectures del mateix full no equivalen a tres exemplars independents. A la conclusió, indica què has mantingut constant i una limitació del muntatge.",
       "examples": [
         "A la proposta del tema es parteix d’una llum de 10 cm i masses petites, fins a 30 g si els dos models ho admeten."
       ],
@@ -1505,7 +1505,7 @@
       ],
       "shortAnswer": "Una diagonal rígida pot treballar a tracció o compressió; un cable flexible només pot quedar tibant a tracció.",
       "easyAnswer": "Si empenys en l’altre sentit, el cable es pot destensar.",
-      "fullAnswer": "Per això una sola diagonal de cable no impedeix necessàriament la deformació en tots dos sentits. Dues diagonals creuades poden alternar quina treballa a tracció. Les barres comprimides també s’han de comprovar davant el vinclament.",
+      "fullAnswer": "Per això una sola diagonal de cable no impedeix necessàriament la deformació en tots dos sentits. Dues diagonals creuades poden alternar quina treballa a tracció. Les barres comprimides també s’han de comprovar davant el vinclament.\n\nGuia del laboratori de triangulació\n1. Comença amb el marc sense diagonal i prova desplaçaments en tots dos sentits.\n2. Activa la diagonal rígida i repeteix la comparació.\n3. Canvia-la per un cable flexible.\n4. Observa en quin sentit queda tibant i en quin queda fluix.\n5. Explica el resultat fent servir tracció i compressió.\n\nPer interpretar-ho bé\nNo concloguis simplement que qualsevol diagonal bloqueja qualsevol moviment. Dues diagonals de cable creuades poden alternar la que treballa a tracció segons el sentit de la força.",
       "examples": [
         "Al laboratori de triangulació, compara els dos sentits de desplaçament amb barra i amb cable."
       ],
@@ -1540,7 +1540,7 @@
       ],
       "shortAnswer": "En una molla ideal, la força i l’allargament es relacionen amb F = k · Δx.",
       "easyAnswer": "Amb la mateixa força, una molla amb k més gran s’allarga menys.",
-      "fullAnswer": "La relació s’aplica dins del règim lineal elàstic. Si k està en N/cm i F en N, l’allargament surt en cm. No barregis en una mateixa sèrie mesures de molles amb constants diferents.",
+      "fullAnswer": "La relació s’aplica dins del règim lineal elàstic. Si k està en N/cm i F en N, l’allargament surt en cm. No barregis en una mateixa sèrie mesures de molles amb constants diferents.\n\nGuia del laboratori de molles\n1. Fixa k = 2 N/cm.\n2. Registra forces de 2, 4 i 6 N: en el model ideal obtindràs allargaments d’1, 2 i 3 cm.\n3. Repeteix amb k = 4 N/cm: els allargaments seran 0,5, 1 i 1,5 cm.\n4. Representa F a l’eix horitzontal i Δx al vertical. La pendent és 1/k, no k.\n\nPer interpretar-ho bé\nL’allargament és la diferència entre longitud carregada i inicial, no la longitud total. Mantén una sèrie separada per cada valor de k. En una molla real, la proporcionalitat pot deixar de complir-se fora del règim lineal.",
       "examples": [
         "Amb k = 2 N/cm i F = 4 N, l’allargament ideal és de 2 cm."
       ],
@@ -1574,7 +1574,7 @@
       ],
       "shortAnswer": "Els dos suports no sempre reben la meitat de la càrrega: depèn d’on s’aplica.",
       "easyAnswer": "El suport més proper a una càrrega puntual acostuma a rebre més força.",
-      "fullAnswer": "Per a una biga simplement recolzada amb una sola càrrega puntual F, sense pes propi, situada a distància x del suport esquerre i amb llum L: R dreta = F·x/L i R esquerra = F·(L−x)/L. És un model ideal, no una regla per a qualsevol estructura.",
+      "fullAnswer": "Per a una biga simplement recolzada amb una sola càrrega puntual F, sense pes propi, situada a distància x del suport esquerre i amb llum L: R dreta = F·x/L i R esquerra = F·(L−x)/L. És un model ideal, no una regla per a qualsevol estructura.\n\nExemple raonat\nConsidera una biga ideal de 100 cm i una força de 10 N situada a 25 cm del suport esquerre. La reacció dreta és 10·25/100 = 2,5 N; l’esquerra és 7,5 N. La suma dona 10 N, que compensa la càrrega. En moure-la al centre, cada suport rep 5 N.\n\nPer interpretar-ho bé\nAl laboratori, prediu el repartiment abans de moure el control. Després comprova’l i registra càrrega, posició i reaccions. Canviar només la posició ajuda a explicar per què cada suport no rep sempre la meitat.",
       "examples": [
         "Una càrrega centrada reparteix F/2 a cada suport en aquest model."
       ],
@@ -1608,7 +1608,7 @@
       ],
       "shortAnswer": "Un pont recíproc de llistons se sosté gràcies a la geometria i a les forces entre les peces en contacte.",
       "easyAnswer": "Les peces es recolzen les unes en les altres.",
-      "fullAnswer": "Les forces normals i el fregament contribueixen al suport; els llistons també poden treballar a flexió. En l’activitat es munten set llistons sobre una taula, sense cola i sense afegir càrregues. Revisa l’ordre de superposició i la simetria si llisca.",
+      "fullAnswer": "Les forces normals i el fregament contribueixen al suport; els llistons també poden treballar a flexió. En l’activitat es munten set llistons sobre una taula, sense cola i sense afegir càrregues. Revisa l’ordre de superposició i la simetria si llisca.\n\nCom interpretar el muntatge\nIdentifica quines peces recolzen sobre quines i fotografia els contactes. Reconstrueix el mòdul amb les mateixes marques i compara la separació i l’altura. Si llisca, revisa l’ordre sobre/sota, la simetria i les distàncies abans de donar per dolent el material. La geometria i el fregament participen en el resultat.\n\nPer interpretar-ho bé\nRegistra si es manté deu segons sense mans. Aquesta observació demostra que aquell muntatge s’ha sostingut en aquelles condicions, però no permet deduir quina càrrega addicional podria suportar.",
       "examples": [
         "Comprova si es manté 10 segons sense mans i registra quin contacte llisca; això no determina una càrrega admissible."
       ],
@@ -1618,6 +1618,230 @@
         "structures.joints"
       ],
       "page": "#structures.leonardo"
+    },
+    {
+      "id": "structures.lab-method",
+      "module": "structures",
+      "topic": "Com investigar al laboratori",
+      "title": "Com investigar al laboratori",
+      "concepts": [
+        "lab-method"
+      ],
+      "keywords": [
+        "investigar",
+        "experiment",
+        "hipotesi",
+        "prediccio",
+        "variables",
+        "conclusions",
+        "dades",
+        "laboratori"
+      ],
+      "expressions": [
+        "com investigar al laboratori"
+      ],
+      "exampleQuestions": [
+        "Com investigar al laboratori",
+        "com faig les conclusions del laboratori",
+        "com registro les dades de l experiment"
+      ],
+      "shortAnswer": "Una bona investigació comença amb una pregunta concreta, una predicció i una comparació controlada.",
+      "easyAnswer": "Canvia una cosa, observa què passa i explica-ho amb les dades.",
+      "fullAnswer": "Abans de començar\nEscriu què vols comprovar i què esperes que passi. Identifica la variable que canviaràs, la que mesuraràs i les que mantindràs constants.\n\nDurant la prova\nRegistra la configuració inicial, les unitats i cada resultat. Si un intent falla, descriu què ha passat; no substitueixis el resultat per un valor esperat.\n\nDesprés\nCompara predicció i dades. Explica el mecanisme físic i els límits del model. Una simulació il·lustra les hipòtesis programades: no valida per si sola una estructura real.",
+      "examples": [
+        "Per estudiar la flexió, canvia la llum entre suports mantenint material, secció i càrrega."
+      ],
+      "related": [
+        "structures.paper-lab",
+        "structures.springs",
+        "structures.support-reactions"
+      ],
+      "page": "#structures.lab-method"
+    },
+    {
+      "id": "structures.stability-lab",
+      "module": "structures",
+      "topic": "Guia del laboratori d’estabilitat",
+      "title": "Guia del laboratori d’estabilitat",
+      "concepts": [
+        "stability-lab"
+      ],
+      "keywords": [
+        "laboratori",
+        "estabilitat",
+        "inclinacio",
+        "altura",
+        "base",
+        "bolcat",
+        "controls"
+      ],
+      "expressions": [
+        "guia del laboratori d’estabilitat"
+      ],
+      "exampleQuestions": [
+        "Guia del laboratori d’estabilitat",
+        "com funciona el laboratori d estabilitat",
+        "com utilitzo el simulador d estabilitat"
+      ],
+      "shortAnswer": "Compara l’efecte de la base i de l’altura mantenint les altres variables constants.",
+      "easyAnswer": "Inclina el mateix model i mira quan la vertical del pes surt de la base.",
+      "fullAnswer": "Pas a pas\n1. Comença amb base 140, posició 0 i altura 100 en les unitats del simulador.\n2. Augmenta la inclinació fins a observar la bolcada. Anota el llindar aproximat.\n3. Torna a inclinació zero i fixa altura 150, sense canviar la base.\n4. Repeteix i compara.\n\nQuè has d’explicar\nRelaciona el canvi del llindar amb el centre de gravetat i la base. El model assumeix que el cos no llisca abans. No interpretis els valors del control com dimensions reals si el simulador no ho especifica.",
+      "examples": [
+        "Una torre més alta pot arribar al límit de bolcada amb una inclinació més petita."
+      ],
+      "related": [
+        "structures.stability",
+        "structures.gravity",
+        "structures.base"
+      ],
+      "page": "#structures.stability-lab"
+    },
+    {
+      "id": "structures.bending-lab",
+      "module": "structures",
+      "topic": "Guia del laboratori de flexió",
+      "title": "Guia del laboratori de flexió",
+      "concepts": [
+        "bending-lab"
+      ],
+      "keywords": [
+        "laboratori",
+        "flexio",
+        "area",
+        "constant",
+        "amplada",
+        "altura",
+        "seccio",
+        "controls"
+      ],
+      "expressions": [
+        "guia del laboratori de flexió"
+      ],
+      "exampleQuestions": [
+        "Guia del laboratori de flexió",
+        "com funciona el laboratori de flexio",
+        "guia simulador flexio"
+      ],
+      "shortAnswer": "Per estudiar la forma de la secció, compara altures amb la mateixa àrea, càrrega i llum.",
+      "easyAnswer": "Fes la secció més alta sense afegir material i observa la deformació.",
+      "fullAnswer": "Configuració de referència\nComença amb 10 N, 100 cm de llum i secció de 10 × 10 mm. Activa l’àrea constant de 100 mm².\n\nComparació\nProva altures de 5, 10 i 20 mm: les amplades corresponents són 20, 10 i 5 mm. Anota la deformació sense canviar força ni llum.\n\nInterpretació\nL’amplada canvia perquè àrea = amplada × altura. En una secció rectangular, la rigidesa a flexió en la direcció considerada depèn fortament de l’altura. Si desactives l’àrea constant i mantens l’amplada, també canvies la quantitat de material: és una altra comparació.",
+      "examples": [
+        "Amb àrea constant, duplicar l’altura d’una secció rectangular multiplica per quatre el seu moment d’inèrcia en aquella direcció."
+      ],
+      "related": [
+        "structures.bending",
+        "structures.profiles",
+        "structures.rigidity"
+      ],
+      "page": "#structures.bending-lab"
+    },
+    {
+      "id": "structures.force-vectors-lab",
+      "module": "structures",
+      "topic": "Guia del laboratori de vectors",
+      "title": "Guia del laboratori de vectors",
+      "concepts": [
+        "force-vectors-lab"
+      ],
+      "keywords": [
+        "laboratori",
+        "vectors",
+        "angle",
+        "direccio",
+        "sentit",
+        "modul",
+        "fletxa"
+      ],
+      "expressions": [
+        "guia del laboratori de vectors"
+      ],
+      "exampleQuestions": [
+        "Guia del laboratori de vectors",
+        "com funciona el laboratori de vectors"
+      ],
+      "shortAnswer": "Utilitza el mòdul, la direcció i el sentit per descriure una força sense ambigüitats.",
+      "easyAnswer": "La mida de la fletxa diu quant; l’orientació i la punta diuen cap on.",
+      "fullAnswer": "Prova guiada\nTria el repte de 50 N vertical cap amunt. Prediu l’angle segons la convenció que mostra el simulador i després ajusta els controls.\n\nCompara\nMantén el mòdul i afegeix 180° a l’angle. La força conserva la direcció de la recta i inverteix el sentit.\n\nRegistra\nAnota mòdul, angle i descripció verbal. Dibuixa també una força a escala sobre un objecte del teu entorn. No confonguis una rotació de 90° amb invertir el sentit.",
+      "examples": [
+        "Dues forces de 50 N verticals, una amunt i una avall, tenen el mateix mòdul i direcció, però sentits oposats."
+      ],
+      "related": [
+        "structures.forces",
+        "structures.lab-method"
+      ],
+      "page": "#structures.force-vectors-lab"
+    },
+    {
+      "id": "structures.mass-weight",
+      "module": "structures",
+      "topic": "Massa i pes: quina diferència hi ha?",
+      "title": "Massa i pes: quina diferència hi ha?",
+      "concepts": [
+        "mass-weight"
+      ],
+      "keywords": [
+        "massa",
+        "pes",
+        "quilograms",
+        "kg",
+        "newtons",
+        "gravetat",
+        "diferencia"
+      ],
+      "expressions": [
+        "massa i pes: quina diferència hi ha?"
+      ],
+      "exampleQuestions": [
+        "Massa i pes: quina diferència hi ha?"
+      ],
+      "shortAnswer": "La massa es mesura en quilograms; el pes és una força i es mesura en newtons.",
+      "easyAnswer": "La massa indica quanta matèria hi ha; el pes depèn també de la gravetat.",
+      "fullAnswer": "Relació\nEl pes es calcula amb P = m·g. A prop de la superfície terrestre, g és aproximadament 9,8 N/kg. Per fer estimacions a classe sovint es fa servir 10 N/kg, indicant l’aproximació.\n\nExemple\nUna massa de 200 g són 0,2 kg i pesa aproximadament 1,96 N. Cal convertir grams a quilograms abans de multiplicar.\n\nError habitual\nDir que una peça suporta 200 g descriu una massa de prova; la càrrega gravitatòria corresponent és una força. Conserva les unitats en les taules.",
+      "examples": [
+        "Una massa d’1 kg pesa aproximadament 9,8 N a la Terra."
+      ],
+      "related": [
+        "structures.forces",
+        "structures.loads"
+      ],
+      "page": "#structures.mass-weight"
+    },
+    {
+      "id": "structures.failure",
+      "module": "structures",
+      "topic": "Per què falla una estructura?",
+      "title": "Per què falla una estructura?",
+      "concepts": [
+        "failure"
+      ],
+      "keywords": [
+        "fallada",
+        "falla",
+        "trenca",
+        "cau",
+        "col·lapse",
+        "esquerda",
+        "fallar"
+      ],
+      "expressions": [
+        "per què falla una estructura?"
+      ],
+      "exampleQuestions": [
+        "Per què falla una estructura?"
+      ],
+      "shortAnswer": "Una estructura pot fallar per trencament, deformació excessiva, bolcada, vinclament o problemes d’unió i suport.",
+      "easyAnswer": "Que una estructura falli no sempre vol dir que s’hagi trencat el material.",
+      "fullAnswer": "Diagnòstic\nObserva què ha canviat primer: s’ha obert una unió, s’ha doblegat una barra, ha lliscat un suport o ha bolcat el conjunt? Descriu el que veus abans d’atribuir una causa.\n\nMillora\nRelaciona cada problema amb una intervenció: reforçar unions, reduir longitud lliure, modificar seccions, ampliar la base o revisar el recolzament. Afegir material indiscriminadament pot augmentar el pes sense resoldre la causa.\n\nLímit\nUna maqueta educativa permet comparar dissenys; no certifica construccions reals.",
+      "examples": [
+        "Un marc pot deformar-se com un rombe sense que es trenqui cap barra."
+      ],
+      "related": [
+        "structures.resistance",
+        "structures.stability",
+        "structures.buckling",
+        "structures.joints"
+      ],
+      "page": "#structures.failure"
     }
   ],
   "sources": [
